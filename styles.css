@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&display=swap");
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+#navbar {
+  position: fixed;
+  width: 200px;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  border-right: solid;
+  border-color: #000000;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+#logo-and-name-module {
+  height: 35%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#logo-and-name-module h1 {
+  font-size: 150%;
+  text-align: center;
+  margin: 0;
+}
+.img-fluid {
+  width: 40%;
+  max-height: 40%;
+  margin: 0 auto;
+}
+
+#navigation-links {
+  height: 50%;
+  background-color: #090909;
+}
+#navigation-links ul {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0;
+}
+#navigation-links li {
+  list-style: none;
+  width: 100%;
+}
+#navigation-links a {
+  text-decoration: none;
+  color: #ffffff;
+}
+#social-links-section {
+  height: 15%;
+}
+#social-links-section ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+#social-links-section li {
+  list-style: none;
+}
+#social-links-section i {
+  font-size: 150%;
+}
+
+.fa-github-alt,
+.fa-codepen {
+  color: #ff6347;
+}
+.fa-linkedin {
+  color: #ffc04a;
+}
+
+main {
+  color: #ffffff;
+  position: absolute;
+  margin-left: 200px;
+  padding: 25px;
+  background-color: #1a1a1a;
+  width: calc(100% - 200px);
+  height: auto;
+}
+section {
+  height: 80vh;
+}
+#about-section {
+  background-color: rgb(44, 44, 44);
+  margin-bottom: 25px;
+}
+#services-section {
+  background-color: rgb(54, 54, 54);
+}
+#about-section h2 {
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: 400;
+  color: #ffc04a;
+}
+#about-section h3 {
+  font-size: 250%;
+}
+#about-section p {
+  font-size: 100%;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+.button {
+  text-decoration: none;
+  color: #ffc04a;
+  border: 1px solid #ffc04a;
+  padding: 15px 30px;
+  border-radius: 3px;
+}
+.button:hover {
+  color: #ff6347;
+  border-color: #ff6347;
+}
