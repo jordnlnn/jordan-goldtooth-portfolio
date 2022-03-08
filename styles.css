@@ -93,24 +93,10 @@ main {
 section {
   height: 80vh;
 }
+
 #about-section {
   background-color: rgb(44, 44, 44);
   margin-bottom: 25px;
-}
-#services-section {
-  background-color: rgb(54, 54, 54);
-  margin-bottom: 25px;
-}
-#process-section {
-  background-color: rgb(44, 44, 44);
-  margin-bottom: 25px;
-}
-#portfolio-section {
-  background-color: rgb(54, 54, 54);
-  margin-bottom: 25px;
-}
-#contact-section {
-  background-color: rgb(44, 44, 44);
 }
 #about-section h2 {
   text-transform: uppercase;
@@ -126,12 +112,98 @@ section {
   font-weight: 100;
   margin-bottom: 30px;
 }
+
+.about-row,
+.services-row {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.col {
+  padding: 5px 5px 20px 5px;
+  margin: 0;
+  background-color: darkslateblue;
+}
+#services-section {
+  background-color: rgb(54, 54, 54);
+  margin-bottom: 25px;
+}
+#process-section {
+  background-color: rgb(44, 44, 44);
+  margin-bottom: 25px;
+}
+.process-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 33%;
+  text-align: center;
+}
+#process-section h2 {
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: 400;
+  color: #ffc04a;
+  padding: 0;
+  margin: 0;
+}
+#process-section h3 {
+  font-size: 250%;
+  padding: 0;
+  margin: 0;
+}
+#process-section p {
+  font-size: 100%;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+#portfolio-section {
+  background-color: rgb(54, 54, 54);
+  margin-bottom: 25px;
+}
+.portfolio-row {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.portfolio-mockup-row {
+  height: 70%;
+}
+.portfolio-mockup-column {
+  background-color: crimson !important;
+}
+#portfolio-section h2 {
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: 400;
+  color: #ffc04a;
+}
+#portfolio-section h3 {
+  font-size: 200%;
+}
+/*
+#arrows-column {
+  background-color: blueviolet;
+}*/
+
+.portfolio-arrows {
+  font-size: 300%;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#contact-section {
+  background-color: rgb(44, 44, 44);
+}
 .button {
   text-decoration: none;
   color: #ffc04a;
-  border: 1px solid #ffc04a;
+  border: 2px solid #ffc04a;
   padding: 15px 30px;
   border-radius: 3px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 .button:hover {
   color: #ff6347;
