@@ -123,21 +123,42 @@ section {
 .col {
   padding: 5px 5px 20px 5px;
   margin: 0;
-  background-color: darkslateblue;
 }
 #services-section {
   background-color: rgb(54, 54, 54);
   margin-bottom: 25px;
 }
+#services-section h2 {
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: 400;
+  color: #ffc04a;
+}
+#services-section h3 {
+  font-size: 250%;
+}
+#services-section p {
+  font-size: 100%;
+  font-weight: 100;
+  margin-bottom: 30px;
+}
+
+/*process section*/
+
 #process-section {
   background-color: rgb(44, 44, 44);
   margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .process-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 33%;
+  height: auto;
+  padding: 0;
   text-align: center;
 }
 #process-section h2 {
@@ -158,7 +179,11 @@ section {
   font-weight: 100;
   margin-bottom: 30px;
 }
+code {
+  color: #ff6347;
+}
 
+/*portfolio section */
 #portfolio-section {
   background-color: rgb(54, 54, 54);
   margin-bottom: 25px;
@@ -182,15 +207,14 @@ section {
 #portfolio-section h3 {
   font-size: 200%;
 }
-/*
-#arrows-column {
-  background-color: blueviolet;
-}*/
 
 .portfolio-arrows {
   font-size: 300%;
   text-decoration: none;
-  color: #ffffff;
+  color: #ffc04a;
+}
+.portfolio-arrows:hover {
+  color: #ff6347;
 }
 
 #contact-section {
@@ -208,4 +232,68 @@ section {
 .button:hover {
   color: #ff6347;
   border-color: #ff6347;
+  background-color: rgba(255, 99, 71, 0.1);
+}
+
+/*contact form*/
+#contact-section {
+  height: auto;
+}
+
+#contact-section h2 {
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: 400;
+  color: #ffc04a;
+}
+#contact-section h3 {
+  font-size: 200%;
+  margin-bottom: 20px;
+}
+
+form {
+  background-color: #090909;
+  color: #ffffff;
+  max-width: 50%;
+  padding: 40px;
+  border-radius: 0px;
+  line-height: 1.4;
+}
+
+.form-group {
+  margin: 0 auto 15px auto;
+  display: block;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 100%;
+  font-weight: 400;
+  color: #ff6347;
+  margin-bottom: 5px;
+}
+#name,
+#email {
+  width: 100%;
+  height: 40px;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+}
+textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #333333;
+  color: #ffffff;
+  border-radius: 3px;
+  border: none;
+}
+#submit {
+  background-color: #000000;
+}
+#submit:hover {
+  background-color: rgba(255, 99, 71, 0.1);
 }
