@@ -29,7 +29,7 @@
   text-align: center;
   margin: 0;
 }
-.img-fluid {
+#logo-png {
   width: 40%;
   max-height: 40%;
   margin: 0 auto;
@@ -86,16 +86,18 @@ main {
   position: absolute;
   margin-left: 200px;
   padding: 25px;
-  background-color: #1a1a1a;
+  background-color: #1e1e1e;
   width: calc(100% - 200px);
   height: auto;
 }
 section {
-  height: 80vh;
+  height: 700px;
+  padding: 0px 0px;
+  background: #090909;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 #about-section {
-  background-color: rgb(44, 44, 44);
   margin-bottom: 25px;
 }
 #about-section h2 {
@@ -108,9 +110,36 @@ section {
   font-size: 250%;
 }
 #about-section p {
-  font-size: 100%;
+  font-size: 16px;
   font-weight: 100;
   margin-bottom: 30px;
+}
+.about-img-div {
+width: 400px;
+height: 400px;
+background: url(./images/JG-logo-transparent.png),
+rgba(0, 0, 0, 0.47);
+background-size: contain;
+border: 7px solid #000000;
+box-sizing: border-box;
+z-index: 3;
+background-position: center;
+background-repeat: no-repeat;
+}
+.about-orange-square {
+  position: absolute;
+  margin-top: 140px;
+  margin-left: 190px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 99, 71, 0.3);
+}
+.about-images-col {
+  display: flex;
+  justify-content: center;
+} 
+.about-description-col {
+  padding: 50px;
 }
 
 .about-row,
@@ -118,29 +147,52 @@ section {
   display: flex;
   align-items: center;
   height: 100%;
+  padding: 50px;
 }
 
 .col {
-  padding: 5px 5px 20px 5px;
   margin: 0;
 }
 #services-section {
-  background-color: rgb(54, 54, 54);
   margin-bottom: 25px;
 }
 #services-section h2 {
   text-transform: uppercase;
   font-size: 100%;
   font-weight: 400;
-  color: #ffc04a;
+  color: #ffc04a;;
 }
 #services-section h3 {
   font-size: 250%;
 }
 #services-section p {
-  font-size: 100%;
+  font-size: 16px;
   font-weight: 100;
-  margin-bottom: 30px;
+}
+.services-column {
+  height: 100%;
+}
+#development-blurb {
+  background: rgba(40, 6, 0, 0.5);
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px rgba(255, 99, 71, 0.45);
+  padding: 20px;
+}
+#design-blurb {
+  background: rgba(29, 19, 0, 0.5);
+  border: 4px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 15px rgba(255, 192, 74, 0.45);
+  padding: 20px;
+}
+#support-blurb {
+    background: rgba(40, 6, 0, 0.5);
+    border: 4px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px rgba(255, 99, 71, 0.45);
+    padding: 20px;
+    width: 100%;
 }
 
 /*process section*/
@@ -189,14 +241,8 @@ code {
   margin-bottom: 25px;
 }
 .portfolio-row {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-.portfolio-mockup-row {
-  height: 70%;
-}
-.portfolio-mockup-column {
-  background-color: crimson !important;
+  padding-top: auto;
+  padding-bottom: auto;
 }
 #portfolio-section h2 {
   text-transform: uppercase;
@@ -207,7 +253,6 @@ code {
 #portfolio-section h3 {
   font-size: 200%;
 }
-
 .portfolio-arrows {
   font-size: 300%;
   text-decoration: none;
@@ -216,7 +261,56 @@ code {
 .portfolio-arrows:hover {
   color: #ff6347;
 }
+.portfolio-mockup-row {
+  height: auto;
+}
+.portfolio-mockup-column {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.mockup-column-one {
+  text-align: left;
+}
+.mockup-column-one p {
+  font-weight: 100;
+}
+.project-titles h4 {
+  font-size: 14px;
+  color: #ff6347;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.project-titles h5 {
+  font-size: 150%;
+}
+.mockup-column-two {
+  padding: 0;
+  margin: 0;
+}
+.technologies-used h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffc04a;
+}
+.technologies-used span {
+  font-size: 24px;
+}
+.fa-html5, .fa-js-square {
+  color: #cccccc;
+}
+.fa-css3-alt {
+  color: #cccccc;
+}
+#coffee-landing-page-project-photo {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
 
+/*contact section*/
 #contact-section {
   background-color: rgb(44, 44, 44);
 }
@@ -228,6 +322,7 @@ code {
   border-radius: 3px;
   margin-top: 15px;
   margin-bottom: 15px;
+  display: inline-block!important;
 }
 .button:hover {
   color: #ff6347;

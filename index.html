@@ -26,14 +26,14 @@
   <body>
     <nav id="navbar">
       <div id="logo-and-name-module">
-        <img src="./images/JG-logo-transparent.png" class="img-fluid" />
+        <img src="./images/JG-logo-transparent.png" class="img-fluid" id="logo-png"/>
         <h1>Jordan Goldtooth</h1>
       </div>
       <div id="navigation-links">
         <ul>
           <li><a href="#about-section">About</a></li>
           <li><a href="#services-section">Services</a></li>
-          <li><a href="#process-section">Process</a></li>
+          <!--<li><a href="#process-section">Process</a></li>-->
           <li><a href="#portfolio-section">Portfolio</a></li>
           <li><a href="#contact-section">Contact</a></li>
         </ul>
@@ -61,46 +61,55 @@
     <main>
       <section id="about-section" class="container">
         <div class="row about-row">
-          <div class="col">
-            <h2>lorem ipsum</h2>
+          <div class="col about-description-col">
+            <h2>HELLO👋</h2>
             <h3>About Me</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              My name is Jordan and I enjoy crafting front-end designs that are clean and concise. My interest in web development began in 2008 when I would tinker with MySpace layouts. I didn't realize it back then, but editing and customizing my own layouts taught me a lot about HTML and CSS.
+              <br />
+              <br />
+              Today, I have the privilege of working at Gold Level Marketing where I build and maintain websites for a variety of clients. While at work, my main goal is to create designs that focus on experiences and funtionality. At home, I'm constantly looking for ways to improve my skill set.
             </p>
-            <a class="button">BUTTON</a>
+            <a class="button" href="#contact-section">SAY HELLO</a>
           </div>
-          <div class="col">2ND COLUMN</div>
+          <div class="col about-images-col">
+            <div class="about-img-div"></div>
+            <div class="about-orange-square"></div>
+          </div>
         </div>
       </section>
 
       <section id="services-section" class="container">
         <div class="row services-row">
-          <div class="col">
-            <h2>lorem ipsum</h2>
+          <div class="col services-column services-column-1 justify-content-around flex-column">
+            <h2>What I Can Do👩‍💻</h2>
             <h3>Services</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+             I offer custom designs, development, and support services.
+             <br />
+             <br />
+             I will work with you to create a gorgeous, professional website that perfectly reflects your company's brand and values. Once we've settled on the right design for you, I will implement it so it is fully optimized and ready to go live.
+            <br />
+            <br />
+            As part of my service, I also offer post-launch support: if you need help with your site after the launch, I can continue to help maintain your site or add new features as needed.
             </p>
-            <a class="button">BUTTON</a>
+            <a class="button">WORK WITH ME</a>
           </div>
-          <div class="col">
-            this is the 2nd column
+          <div class="col services-column d-flex justify-content-around align-items-center flex-column">
+            <div class="services-blurbs text-center" id="development-blurb"><h4>DEVELOPMENT</h4>
+              <p>HTML, CSS, JavaScript, React, WordPress, Divi, Elementor.</p>
+             </div>
+            <div class="services-blurbs text-center" id="design-blurb"><h4>DESIGN</h4>
+            <p>UI/UX, Adobe Photoshop, Illustrator, XD, Invision, Figma.</p>
+            </div>
+            <div class="services-blurbs text-center" id="support-blurb"><h4>SUPPORT</h4>
+            <p>Hosting, Domain, SSL.</p>
+            </div>
           </div>
         </div>
       </section>
 
+    <!--
       <section id="process-section" class="container">
         <div class="row process-row">
           <div class="col">
@@ -122,14 +131,14 @@
                <code>< step two /></code>
                <h4>Design & Create</h4>
               <p>
-                Websites will then be designed based off wireframes. Designs are created and tailored specifically for your brand, then you choose if you want it created with a page builder or pure HTML code. I need some placeholder text, so this is my placeholder. 
+                Websites will then be designed based off wireframes. Designs are created and tailored specifically for your brand, then you choose if you want it created with a page builder or HTML code. I need some placeholder text, so this is my placeholder. 
               </p>
           </div>
           <div class="col process-columns">
               <code>< step three /></code>
               <h4>Deploy & Launch</h4>
             <p>
-              Once your design has been completed, it’ll go through a series of user testing to ensure that your website is responsive and optimized for all browsers, and that you are happy with the overall front end experience. This is more placeholder text so I can equalize columns.
+              Once your design has been completed, it’ll go through a series of user testing to ensure that your website is responsive and optimized for all browsers, and that you are happy with the overall front-end experience. This is more placeholder text so I can equalize columns.
             </p>
           </div>
         </div>
@@ -143,11 +152,13 @@
           </div>
         </div>
       </section>
+-->
+
 
       <section id="portfolio-section" class="container">
         <div class="row portfolio-row">
           <div class="col-10">
-            <h2>lorem ipsum</h2>
+            <h2>What I've Done🎨</h2>
             <h3>Portfolio</h3>
           </div>  
             <div class="col-2 d-flex justify-content-around align-items-center" id="arrows-column">
@@ -157,8 +168,18 @@
             </div>
 
             <div class="row portfolio-mockup-row">
-              <div class="col portfolio-mockup-column">portfolio info will go here</div>
-              <div class="col portfolio-mockup-column">portfolio mockup will go here</div>
+              <div class="col portfolio-mockup-column mockup-column-one">
+                <div class="project-titles"><h4>project one</h4>
+                <h5>Coffee Landing Page</h5></div>
+                <p>Static landing page that contains an informative card and an interactive question. Information was collected from Wikipedia, and the question uses information inputted by the user. Built with HTML, CSS, and JavaScript. Completed in April 2021. </p>
+                <div class="technologies-used">
+                  <h4>Technologies Used:</h4>
+                <span><i class="fa-brands fa-html5"></i>  <i class="fa-brands fa-css3-alt"></i>  <i class="fa-brands fa-js-square"></i></span>
+                </div>
+              </div>
+              <div class="col portfolio-mockup-column mockup-column-two">
+                <img src="./images/coffee-landing-page.jpg" class="img-fluid" id="coffee-landing-page-project-photo"/>
+              </div>
             </div>
       </section>
 
@@ -167,7 +188,7 @@
           <div class="col">
   
   <form id="contact-form">
-    <h2>lorem ipsum</h2>
+    <h2>How To Get In Touch💻</h2>
             <h3>Contact Me</h3>
     <div class="form-group">
     <label for="name" id="name-label">Name:</label>
