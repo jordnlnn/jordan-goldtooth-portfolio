@@ -96,6 +96,11 @@ section {
   background: #090909;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+@media all and (max-width: 980px) {
+  section {
+    height: auto;
+  }
+}
 
 #about-section {
   margin-bottom: 25px;
@@ -237,7 +242,6 @@ code {
 
 /*portfolio section */
 #portfolio-section {
-  background-color: rgb(54, 54, 54);
   margin-bottom: 25px;
 }
 .portfolio-row {
@@ -312,7 +316,9 @@ code {
 
 /*contact section*/
 #contact-section {
-  background-color: rgb(44, 44, 44);
+  background: url(./images/phx-az-map-2.png);
+  background-size: cover;
+  background-position: center;
 }
 .button {
   text-decoration: none;
@@ -347,7 +353,7 @@ code {
 }
 
 form {
-  background-color: #090909;
+  background-color: #090909f1;
   color: #ffffff;
   max-width: 50%;
   padding: 40px;
