@@ -3,6 +3,10 @@
   font-family: "Roboto Mono", monospace;
 }
 
+
+
+
+/*NAVIGATION STYLING*/
 #navbar {
   position: fixed;
   width: 200px;
@@ -14,8 +18,8 @@
   text-align: center;
   background-color: #000000;
   color: #ffffff;
+  flex: 1 1 0;
 }
-
 #logo-and-name-module {
   height: 35%;
   padding: 0;
@@ -34,7 +38,6 @@
   max-height: 40%;
   margin: 0 auto;
 }
-
 #navigation-links {
   height: 50%;
   background-color: #090909;
@@ -42,9 +45,9 @@
 #navigation-links ul {
   padding: 0;
   height: 100%;
-  display: flex;
+  /*display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-evenly;*/
   margin: 0;
 }
 #navigation-links li {
@@ -72,7 +75,6 @@
 #social-links-section i {
   font-size: 150%;
 }
-
 .fa-github-alt,
 .fa-codepen {
   color: #ff6347;
@@ -81,27 +83,74 @@
   color: #ffc04a;
 }
 
+@media (max-width: 811px) {
+  #navbar {
+    display: none;
+    width: 0px;
+    height: 0px;
+  }
+  main {
+    width: 100%!important;
+    margin: 0!important;
+  }
+}
+
+/*MAIN CONTENT STYLING*/
 main {
   color: #ffffff;
-  position: absolute;
+  position: relative;
   margin-left: 200px;
   padding: 25px;
   background-color: #1e1e1e;
   width: calc(100% - 200px);
   height: auto;
 }
+
+/*STYLING FOR ALL SECTIONS*/
 section {
-  height: 700px;
-  padding: 0px 0px;
+  height: auto;
+  padding: 30px;
   background: #090909;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-@media all and (max-width: 980px) {
-  section {
+.col {
+  margin: 0;
+  padding: 0;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100%;
+  padding: 30px;
+}
+@media (max-width: 811px) {
+  .row {
     height: auto;
+    flex-direction: column;
   }
 }
 
+/*STYLING FOR ALL BUTTONS*/
+.button {
+  text-decoration: none;
+  color: #ffc04a;
+  border: 2px solid #ffc04a;
+  padding: 15px 30px;
+  border-radius: 3px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.button:hover {
+  color: #ff6347;
+  border-color: #ff6347;
+  background-color: rgba(255, 99, 71, 0.1);
+}
+
+
+
+/*ABOUT SECTION STYLING*/
 #about-section {
   margin-bottom: 25px;
 }
@@ -117,136 +166,165 @@ section {
 #about-section p {
   font-size: 16px;
   font-weight: 100;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .about-img-div {
-width: 400px;
-height: 400px;
-background: url(./images/JG-logo-transparent.png),
-rgba(0, 0, 0, 0.47);
-background-size: contain;
-border: 7px solid #000000;
-box-sizing: border-box;
-z-index: 3;
-background-position: center;
-background-repeat: no-repeat;
+  width: 400px;
+  height: 500px;
+  background-image: linear-gradient(45deg,
+    rgba(255, 99, 71, 0.3), rgba(255, 192, 74, 0.3)),
+  url(./images/JG-logo-transparent.png);
+  background-size: cover;
+  background-position: top;
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  z-index: 3;
+  background-repeat: no-repeat;
 }
 .about-orange-square {
   position: absolute;
-  margin-top: 140px;
+  margin-top: 170px;
   margin-left: 190px;
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   background: rgba(255, 99, 71, 0.3);
 }
 .about-images-col {
   display: flex;
   justify-content: center;
 } 
-.about-description-col {
-  padding: 50px;
+@media (max-width: 811px) {
+  .about-description-col {
+    order: 2;
+  }
+  #about-section h2 {
+    font-size: 90%;
+    text-align: center;
+  }
+  #about-section h3 {
+    font-size: 200%;
+    text-align: center;
+  }
+  #about-section p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .about-section-button {
+    display: block!important; 
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .about-img-div {
+    width: 300px;
+    height: 300px;
+    z-index: 3;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .about-images-col {
+    order: 1;
+  }
+  .about-orange-square {
+    display: none;
+  }
 }
 
-.about-row,
-.services-row {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  padding: 50px;
-}
-
-.col {
-  margin: 0;
-}
+/*SERVICES SECTION STYLING - DESKTOP*/
 #services-section {
   margin-bottom: 25px;
+}
+.services-row {
+  padding-bottom: 0;
 }
 #services-section h2 {
   text-transform: uppercase;
   font-size: 100%;
   font-weight: 400;
-  color: #ffc04a;;
+  color: #ffc04a;
+  text-align: center;
 }
 #services-section h3 {
   font-size: 250%;
-}
-#services-section p {
-  font-size: 16px;
-  font-weight: 100;
-}
-.services-column {
-  height: 100%;
-}
-#development-blurb {
-  background: rgba(40, 6, 0, 0.5);
-  border: 4px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 0px 5px 15px rgba(255, 99, 71, 0.45);
-  padding: 20px;
-}
-#design-blurb {
-  background: rgba(29, 19, 0, 0.5);
-  border: 4px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 0px 5px 15px rgba(255, 192, 74, 0.45);
-  padding: 20px;
-}
-#support-blurb {
-    background: rgba(40, 6, 0, 0.5);
-    border: 4px solid #000000;
-    box-sizing: border-box;
-    box-shadow: 0px 5px 15px rgba(255, 99, 71, 0.45);
-    padding: 20px;
-    width: 100%;
-}
-
-/*process section*/
-
-#process-section {
-  background-color: rgb(44, 44, 44);
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.process-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding: 0;
   text-align: center;
 }
-#process-section h2 {
-  text-transform: uppercase;
-  font-size: 100%;
-  font-weight: 400;
-  color: #ffc04a;
-  padding: 0;
-  margin: 0;
+#services-section h4 {
+  font-size: 20px;
 }
-#process-section h3 {
-  font-size: 250%;
-  padding: 0;
-  margin: 0;
-}
-#process-section p {
-  font-size: 100%;
+.services-description {
+  font-size: 16px;
   font-weight: 100;
-  margin-bottom: 30px;
+  text-align: center;
 }
-code {
-  color: #ff6347;
+.services-blurbs {
+  text-align: left;
+  padding: 25px;
+  border-radius: 3px;
+  height: 100%;
+  background: #1e1e1e;
+}
+.services-blurbs:hover {
+  background: linear-gradient(45deg,
+    rgba(255, 99, 71, 0.8), rgba(255, 192, 74, 0.8));
+}
+.blurbs-row {
+  align-items: stretch!important;
+}
+.blurb-descriptions {
+  font-weight: 100;
+}
+@media (max-width: 811px) {
+  #services-section h2 {
+    font-size: 90%;
+    text-align: center;
+  }
+  #services-section h3 {
+    font-size: 200%;
+    text-align: center;
+  }
+  .services-description {
+    font-size: 15px!important;
+    text-align: center;
+  }
+  #services-button {
+    display: none;
+  }
+  .services-column-2 {
+    display: inline-flex;
+  }
+  .services-column-2 h4 {
+    font-size: 16px;
+    text-align: left;
+    color: #ff6347;
+  } 
+  .blurb-descriptions {
+    font-size: 12px!important;
+    text-align: left;
+  }
+  #development-blurb {
+    padding: 10px;
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  #design-blurb {
+    padding: 10px;
+    width: 30%;
+  }
+  #support-blurb {
+    padding: 10px;
+    width: 30%;
+  }
 }
 
-/*portfolio section */
+
+/*PORTFOLIO SECTION*/
 #portfolio-section {
   margin-bottom: 25px;
 }
 .portfolio-row {
   padding-top: auto;
-  padding-bottom: auto;
+  padding-bottom: 0;
+  display: none!important; /*FOR NOW UNTIL I STYLE MOCKUP ROW*/
 }
 #portfolio-section h2 {
   text-transform: uppercase;
@@ -265,6 +343,8 @@ code {
 .portfolio-arrows:hover {
   color: #ff6347;
 }
+
+/*SECOND ROW*/
 .portfolio-mockup-row {
   height: auto;
 }
@@ -279,10 +359,19 @@ code {
 }
 .mockup-column-one p {
   font-weight: 100;
+  background: #1e1e1e;
+  padding: 50px 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: -100px;
+  margin-left: -20px;
+  z-index: 5;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
 }
 .project-titles h4 {
   font-size: 14px;
-  color: #ff6347;
+  color: #ffc04a;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -290,57 +379,43 @@ code {
   font-size: 150%;
 }
 .mockup-column-two {
-  padding: 0;
+  padding: 250px 0px 250px 0px;
   margin: 0;
+  background-image: linear-gradient(45deg,
+  rgba(255, 99, 71, 0.3), rgba(255, 192, 74, 0.3)), url(./images/coffee-landing-page.jpg);
+  background-position: center top;
+  border-radius: 3px;
 }
 .technologies-used h4 {
   font-size: 14px;
   text-transform: uppercase;
   color: #ffc04a;
 }
-.technologies-used span {
+.fa-html5, .fa-js-square, .fa-css3-alt {
+  color: #cccccc;
   font-size: 24px;
 }
-.fa-html5, .fa-js-square {
-  color: #cccccc;
-}
-.fa-css3-alt {
-  color: #cccccc;
-}
-#coffee-landing-page-project-photo {
+
+/*#coffee-landing-page-project-photo {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
   text-align: center;
-}
+}*/
 
-/*contact section*/
+/*CONTACT SECTION STYLING*/
+/*rgba(255, 99, 71, 0.45) orange*/
+/*rgba(255, 192, 74, 0.45) yellow*/
 #contact-section {
-  background: url(./images/phx-az-map-2.png);
+  background-image:linear-gradient(45deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./images/phx-az-map-2.png);
   background-size: cover;
   background-position: center;
 }
-.button {
-  text-decoration: none;
-  color: #ffc04a;
-  border: 2px solid #ffc04a;
-  padding: 15px 30px;
-  border-radius: 3px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  display: inline-block!important;
-}
-.button:hover {
-  color: #ff6347;
-  border-color: #ff6347;
-  background-color: rgba(255, 99, 71, 0.1);
-}
 
-/*contact form*/
+/*CONTACT FORM*/
 #contact-section {
   height: auto;
 }
-
 #contact-section h2 {
   text-transform: uppercase;
   font-size: 100%;
@@ -351,21 +426,19 @@ code {
   font-size: 200%;
   margin-bottom: 20px;
 }
-
 form {
-  background-color: #090909f1;
+  background-color: #090909f6;
   color: #ffffff;
   max-width: 50%;
   padding: 40px;
   border-radius: 0px;
   line-height: 1.4;
+  margin: 0 auto;
 }
-
 .form-group {
   margin: 0 auto 15px auto;
   display: block;
 }
-
 label {
   display: flex;
   align-items: center;
@@ -397,4 +470,49 @@ textarea {
 }
 #submit:hover {
   background-color: rgba(255, 99, 71, 0.1);
+}
+
+/*CONTACT SECTION-TABLET STYLING*/
+@media (max-width: 811px) {
+  #contact-section h2 {
+    font-size: 90%;
+  }
+  form {
+    max-width: 80%;
+    padding: 30px;
+    margin: 0 auto;
+  }
+  .form-group {
+    margin: 0 auto 15px auto;
+    display: block;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 100%;
+    font-weight: 400;
+    color: #ff6347;
+    margin-bottom: 5px;
+  }
+  
+  #name,
+  #email {
+    width: 100%;
+    height: 40px;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+  }
+  
+  textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #333333;
+    color: #ffffff;
+    border-radius: 3px;
+    border: none;
+  }
 }

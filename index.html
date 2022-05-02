@@ -14,23 +14,27 @@
     ></script>
 
     <!--bootstrap installation-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 
     <title>Jordan Goldtooth - Portfolio</title>
   </head>
   <body>
+   <!--MOBILE MENU-->
+      <div class="menu-toggle d-none">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+
+
+
+    <!--DESKTOP NAVBAR-->
     <nav id="navbar">
       <div id="logo-and-name-module">
         <img src="./images/JG-logo-transparent.png" class="img-fluid" id="logo-png"/>
         <h1>Jordan Goldtooth</h1>
       </div>
       <div id="navigation-links">
-        <ul>
+        <ul class="d-flex flex-column justify-content-evenly">
           <li><a href="#about-section">About</a></li>
           <li><a href="#services-section">Services</a></li>
           <!--<li><a href="#process-section">Process</a></li>-->
@@ -58,8 +62,13 @@
         </ul>
       </div>
     </nav>
+
+
+    <!--MAIN SECTION/CONTENT BEGINS-->
     <main>
-      <section id="about-section" class="container">
+
+      <!--ABOUT SECTION-->
+      <section id="about-section" class="container-fluid">
         <div class="row about-row">
           <div class="col about-description-col">
             <h2>HELLO👋</h2>
@@ -70,7 +79,7 @@
               <br />
               Today, I have the privilege of working at Gold Level Marketing where I build and maintain websites for a variety of clients. While at work, my main goal is to create designs that focus on experiences and funtionality. At home, I'm constantly looking for ways to improve my skill set.
             </p>
-            <a class="button" href="#contact-section">SAY HELLO</a>
+            <a class="button about-section-button" href="#contact-section">SAY HELLO</a>
           </div>
           <div class="col about-images-col">
             <div class="about-img-div"></div>
@@ -79,12 +88,14 @@
         </div>
       </section>
 
-      <section id="services-section" class="container">
+      <!--SERVICES SECTION-->
+
+      <section id="services-section" class="container-fluid">
         <div class="row services-row">
-          <div class="col services-column services-column-1 justify-content-around flex-column">
+          <div class="col services-column">
             <h2>What I Can Do👩‍💻</h2>
             <h3>Services</h3>
-            <p>
+            <p class="services-description">
              I offer custom designs, development, and support services.
              <br />
              <br />
@@ -93,69 +104,61 @@
             <br />
             As part of my service, I also offer post-launch support: if you need help with your site after the launch, I can continue to help maintain your site or add new features as needed.
             </p>
-            <a class="button">WORK WITH ME</a>
-          </div>
-          <div class="col services-column d-flex justify-content-around align-items-center flex-column">
-            <div class="services-blurbs text-center" id="development-blurb"><h4>DEVELOPMENT</h4>
-              <p>HTML, CSS, JavaScript, React, WordPress, Divi, Elementor.</p>
-             </div>
-            <div class="services-blurbs text-center" id="design-blurb"><h4>DESIGN</h4>
-            <p>UI/UX, Adobe Photoshop, Illustrator, XD, Invision, Figma.</p>
+            <!--<a class="button" id="services-button">WORK WITH ME</a>-->
+         </div>
+         </div>
+   
+          <div class="row blurbs-row">
+            <!--COLUMN DIV-->
+           <div class="col blurbs-col">
+            <!--1ST BLURB DIV-->
+             <div class="services-blurbs mx-auto" id="development-blurb">
+              <h4>
+                <span>
+                  <i class="fa-solid fa-code"></i>
+                </span>
+                DEVELOPMENT
+              </h4>
+              <p class="blurb-descriptions">HTML, CSS, Bootstrap, JavaScript, React, WordPress, Divi, Elementor.</p>
+              </div>
+           </div>
+
+             
+                <div class="col blurbs-col">   
+                <!--2ND BLURB DIV-->     
+                <div class="services-blurbs mx-auto" id="design-blurb">
+                   <h4>
+                     <span>
+                        <i class="fa-solid fa-pen-fancy"></i>
+                     </span>
+                        DESIGN
+                    </h4>
+                    <p class="blurb-descriptions">UI/UX, Adobe Photoshop, Illustrator, XD, Invision, Figma.</p>
+                  </div>
+                  </div> 
+
+
+            <!--3RD COLUMN DIV-->
+            <div class="col blurbs-col">
+            <!--3RD BLURB DIV-->      
+            <div class="services-blurbs mx-auto" id="support-blurb">
+              <h4>
+                <span>
+                  <i class="fa-solid fa-gears"></i>
+                </span>
+                SUPPORT
+              </h4>
+              <p class="blurb-descriptions">Hosting, Domain, SSL.</p>
             </div>
-            <div class="services-blurbs text-center" id="support-blurb"><h4>SUPPORT</h4>
-            <p>Hosting, Domain, SSL.</p>
             </div>
-          </div>
-        </div>
+
+
+           </div> 
+         
       </section>
 
-    <!--
-      <section id="process-section" class="container">
-        <div class="row process-row">
-          <div class="col">
-            <h2>lorem ipsum</h2>
-            <h3>Process</h3>
-          </div>
-        </div>
-
-        <div class="row process-row">
-          <div class="col process-columns">
-          
-              <code>< step one /></code>
-               <h4>Research & Plan</h4>
-              <p>
-                Research will be conducted on your brand’s industry, market, and target audience to ensure that you have an efficient website. Planning will be achieved through gathering materials, crafting wireframes, and building your sitemap.
-              </p>
-          </div>
-          <div class="col process-columns">
-               <code>< step two /></code>
-               <h4>Design & Create</h4>
-              <p>
-                Websites will then be designed based off wireframes. Designs are created and tailored specifically for your brand, then you choose if you want it created with a page builder or HTML code. I need some placeholder text, so this is my placeholder. 
-              </p>
-          </div>
-          <div class="col process-columns">
-              <code>< step three /></code>
-              <h4>Deploy & Launch</h4>
-            <p>
-              Once your design has been completed, it’ll go through a series of user testing to ensure that your website is responsive and optimized for all browsers, and that you are happy with the overall front-end experience. This is more placeholder text so I can equalize columns.
-            </p>
-          </div>
-        </div>
-
-        <div class="row process-row">
-          <div class="col">
-           <a class="button">BUTTON</a>
-          </div>
-        </div>
-        
-          </div>
-        </div>
-      </section>
--->
-
-
-      <section id="portfolio-section" class="container">
+      <!--PORTFOLIO SECTION-->
+      <section id="portfolio-section" class="container-fluid">
         <div class="row portfolio-row">
           <div class="col-10">
             <h2>What I've Done🎨</h2>
@@ -171,46 +174,50 @@
               <div class="col portfolio-mockup-column mockup-column-one">
                 <div class="project-titles"><h4>project one</h4>
                 <h5>Coffee Landing Page</h5></div>
-                <p>Static landing page that contains an informative card and an interactive question. Information was collected from Wikipedia, and the question uses information inputted by the user. Built with HTML, CSS, and JavaScript. Completed in April 2021. </p>
+                <p class="project-description">Static landing page that contains an informative card and an interactive question. Information was collected from Wikipedia, and the question uses information inputted by the user. Built with HTML, CSS, and JavaScript. Completed in April 2021. </p>
                 <div class="technologies-used">
                   <h4>Technologies Used:</h4>
-                <span><i class="fa-brands fa-html5"></i>  <i class="fa-brands fa-css3-alt"></i>  <i class="fa-brands fa-js-square"></i></span>
+                <div><i class="fa-brands fa-html5"></i>  <i class="fa-brands fa-css3-alt"></i>  <i class="fa-brands fa-js-square"></i></div>
                 </div>
               </div>
               <div class="col portfolio-mockup-column mockup-column-two">
-                <img src="./images/coffee-landing-page.jpg" class="img-fluid" id="coffee-landing-page-project-photo"/>
+               <!-- <img src="./images/coffee-landing-page.jpg" class="img-fluid" id="coffee-landing-page-project-photo"/> -->
               </div>
             </div>
       </section>
 
-      <section id="contact-section" class="container">
+      <!--CONTACT SECTION-->
+      <section id="contact-section" class="container-fluid">
         <div class="row contact-row">
           <div class="col">
   
-  <form id="contact-form">
-    <h2>How To Get In Touch💻</h2>
-            <h3>Contact Me</h3>
-    <div class="form-group">
-    <label for="name" id="name-label">Name:</label>
-    <input id="name" type="text" placeholder="Enter your name" name="name" required></input>
-    </div>
+           <form id="contact-form">
+               <h2>How To Get In Touch💻</h2>
+               <h3>Contact Me</h3>
+             <div class="form-group">
+               <label for="name" id="name-label">Name:</label>
+               <input id="name" type="text" placeholder="Enter your name" name="name" required></input>
+             </div>
   
-    <div class="form-group">  
-    <label for="email" id="email-label">Email:</label>
-    <input id="email" type="email" placeholder="Enter your email" required></input>
-    </div>
+             <div class="form-group">  
+               <label for="email" id="email-label">Email:</label>
+               <input id="email" type="email" placeholder="Enter your email" required></input>
+             </div>
 
-<div class="form-group">
-  <label for="message">Message:</label>
-<textarea placeholder="Enter your message here" rows="5" id="message"></textarea>
-</div>
+             <div class="form-group">
+               <label for="message">Message:</label>
+               <textarea placeholder="Enter your message here" rows="5" id="message"></textarea>
+             </div>
 
-<input type="submit" value="Submit" id="submit" class="button"></input>
-  </form>
+            <input type="submit" value="Submit" id="submit" class="button"></input>
+          </form>
 
           </div>
         </div>
       </section>
+
+
+
     </main>
   </body>
 </html>
