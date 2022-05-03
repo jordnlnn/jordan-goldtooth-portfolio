@@ -55,9 +55,8 @@
             ></a>
           </li>
           <li>
-            <a href="https://codepen.io/jordnlnn"
-              ><i class="fa-brands fa-codepen"></i
-            ></a>
+            <a href="https://www.instagram.com/jordnlnn.dev/"
+              ><i class="fa-brands fa-instagram"></i></a>
           </li>
         </ul>
       </div>
@@ -77,7 +76,7 @@
               My name is Jordan and I enjoy crafting front-end designs that are clean and concise. My interest in web development began in 2008 when I would tinker with MySpace layouts. I didn't realize it back then, but editing and customizing my own layouts taught me a lot about HTML and CSS.
               <br />
               <br />
-              Today, I have the privilege of working at Gold Level Marketing where I build and maintain websites for a variety of clients. While at work, my main goal is to create designs that focus on experiences and funtionality. At home, I'm constantly looking for ways to improve my skill set.
+              Today, I have the privilege of working at Gold Level Marketing where I build and maintain websites for a variety of clients. While at work, my main goal is to create designs that focus on experiences and funtionality. 
             </p>
             <a class="button about-section-button" href="#contact-section">SAY HELLO</a>
           </div>
@@ -104,7 +103,6 @@
             <br />
             As part of my service, I also offer post-launch support: if you need help with your site after the launch, I can continue to help maintain your site or add new features as needed.
             </p>
-            <!--<a class="button" id="services-button">WORK WITH ME</a>-->
          </div>
          </div>
    
@@ -137,7 +135,6 @@
                   </div>
                   </div> 
 
-
             <!--3RD COLUMN DIV-->
             <div class="col blurbs-col">
             <!--3RD BLURB DIV-->      
@@ -151,39 +148,84 @@
               <p class="blurb-descriptions">Hosting, Domain, SSL.</p>
             </div>
             </div>
-
-
            </div> 
+           <div class="row">
+             <div class="col">
+                 <a class="button mx-auto" id="services-button" href="#contact-section">WORK WITH ME</a>
+             </div>
+           </div>
          
       </section>
 
       <!--PORTFOLIO SECTION-->
       <section id="portfolio-section" class="container-fluid">
+      <!--PORTFOLIO HEADING ROW-->
         <div class="row portfolio-row">
           <div class="col-10">
             <h2>What I've Done🎨</h2>
             <h3>Portfolio</h3>
           </div>  
-            <div class="col-2 d-flex justify-content-around align-items-center" id="arrows-column">
+
+          <div class="col-2" id="arrows-column">
               <a href="#portfolio-section"><i class="fa-solid fa-arrow-left-long portfolio-arrows"></i></a>
               <a href="#portfolio-section"><i class="fa-solid fa-arrow-right-long portfolio-arrows"></i></a>
-            </div>
-            </div>
+          </div>
+        </div>
 
-            <div class="row portfolio-mockup-row">
-              <div class="col portfolio-mockup-column mockup-column-one">
-                <div class="project-titles"><h4>project one</h4>
-                <h5>Coffee Landing Page</h5></div>
-                <p class="project-description">Static landing page that contains an informative card and an interactive question. Information was collected from Wikipedia, and the question uses information inputted by the user. Built with HTML, CSS, and JavaScript. Completed in April 2021. </p>
+      <!--MOCKUP ROW BEGINS-->
+
+      <!--CAROUSEL SLIDE 1 BEGINS-->
+        <div class="row portfolio-mockup-row carousel-track">
+          <div class="col portfolio-mockup-column mockup-column-one">
+
+            <div class="project-titles">  
+              <h4>project one</h4>
+                <h5>Coffee Landing Page</h5>
+            </div>
+                <p class="project-description">Static landing page that contains an informative card and an interactive question. Information was collected from Wikipedia, and the question uses information inputted by the user. Built with HTML, CSS, and JavaScript. Completed in April 2021. 
+                  <span class="view-project-link">
+                    <a href="https://www.shecodes.io/workshops/shecodes-online-workshop-60-0/projects/292319">VIEW PROJECT<i class="fa-solid fa-arrow-right-long"></i></a></span></p>
                 <div class="technologies-used">
                   <h4>Technologies Used:</h4>
                 <div><i class="fa-brands fa-html5"></i>  <i class="fa-brands fa-css3-alt"></i>  <i class="fa-brands fa-js-square"></i></div>
                 </div>
               </div>
-              <div class="col portfolio-mockup-column mockup-column-two">
-               <!-- <img src="./images/coffee-landing-page.jpg" class="img-fluid" id="coffee-landing-page-project-photo"/> -->
+              <!--PROJECT IMAGE COLUMN-->
+              <div class="col portfolio-mockup-column mockup-column-two" id="project-img-1">
+                <div class="overlay">
+                </div>
               </div>
             </div>
+      <!--CAROUSEL SLIDE 1 ENDS-->
+
+      <!--CAROUSEL SLIDE 2 BEGINS-->
+        <div class="row portfolio-mockup-row carousel-track">
+          <div class="col portfolio-mockup-column mockup-column-one">
+
+            <div class="project-titles">  
+              <h4>project two</h4>
+                <h5>Weather Project</h5>
+            </div>
+                <p class="project-description">Weather application that uses the OpenWeather API to display the weather in real time in a 6-day format. Built with HTML, CSS, Bootstrap, and Javascript. 
+                  <span class="view-project-link">
+                    <a href="https://dazzling-swanson-d72047.netlify.app/">VIEW PROJECT<i class="fa-solid fa-arrow-right-long"></i></a></span></p>
+                <div class="technologies-used">
+                  <h4>Technologies Used:</h4>
+                <div><i class="fa-brands fa-html5"></i>  <i class="fa-brands fa-css3-alt"></i> <i class="fa-brands fa-bootstrap"></i> <i class="fa-brands fa-js-square"></i></div>
+                </div>
+              </div>
+              <!--PROJECT IMAGE COLUMN-->
+              <div class="col portfolio-mockup-column mockup-column-two" id="project-img-2">
+                <div class="overlay">
+                </div>
+              </div>
+            </div>
+      <!--CAROUSEL SLIDE 2 ENDS-->
+
+
+
+
+
       </section>
 
       <!--CONTACT SECTION-->
@@ -219,5 +261,7 @@
 
 
     </main>
+     <script src="portfolio.js"></script>
   </body>
+ 
 </html>

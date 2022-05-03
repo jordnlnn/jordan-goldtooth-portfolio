@@ -76,7 +76,7 @@
   font-size: 150%;
 }
 .fa-github-alt,
-.fa-codepen {
+.fa-instagram {
   color: #ff6347;
 }
 .fa-linkedin {
@@ -112,6 +112,7 @@ section {
   padding: 30px;
   background: #090909;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
 }
 .col {
   margin: 0;
@@ -143,9 +144,11 @@ section {
 }
 
 .button:hover {
-  color: #ff6347;
-  border-color: #ff6347;
-  background-color: rgba(255, 99, 71, 0.1);
+  color: #ffffff;
+  border: 2px solid transparent;
+  padding: 15px 30px;
+  background: linear-gradient(45deg,
+    rgba(255, 99, 71, 0.7), rgba(255, 192, 74, 0.7));
 }
 
 
@@ -265,13 +268,19 @@ section {
 }
 .services-blurbs:hover {
   background: linear-gradient(45deg,
-    rgba(255, 99, 71, 0.8), rgba(255, 192, 74, 0.8));
+    rgba(255, 99, 71, 0.7), rgba(255, 192, 74, 0.7));
+  transition: all 300ms ease 0ms;
 }
 .blurbs-row {
   align-items: stretch!important;
 }
 .blurb-descriptions {
-  font-weight: 100;
+  font-weight: 400;
+}
+#services-button {
+    display: block !important;
+    width: fit-content;
+    margin: 0 auto;
 }
 @media (max-width: 811px) {
   #services-section h2 {
@@ -301,16 +310,7 @@ section {
     font-size: 12px!important;
     text-align: left;
   }
-  #development-blurb {
-    padding: 10px;
-    width: 30%;
-    margin-bottom: 20px;
-  }
-  #design-blurb {
-    padding: 10px;
-    width: 30%;
-  }
-  #support-blurb {
+  .services-blurbs {
     padding: 10px;
     width: 30%;
   }
@@ -322,9 +322,7 @@ section {
   margin-bottom: 25px;
 }
 .portfolio-row {
-  padding-top: auto;
   padding-bottom: 0;
-  display: none!important; /*FOR NOW UNTIL I STYLE MOCKUP ROW*/
 }
 #portfolio-section h2 {
   text-transform: uppercase;
@@ -335,8 +333,15 @@ section {
 #portfolio-section h3 {
   font-size: 200%;
 }
+#arrows-column {
+  display: flex;
+  justify-content: space-around;
+}
+.portfolio-row {
+  padding-bottom: 0px;
+}
 .portfolio-arrows {
-  font-size: 300%;
+  font-size: 200%;
   text-decoration: none;
   color: #ffc04a;
 }
@@ -344,7 +349,10 @@ section {
   color: #ff6347;
 }
 
-/*SECOND ROW*/
+/*SLIDER ROW*/
+.carousel-track {
+  /*background-color: aqua;*/
+}
 .portfolio-mockup-row {
   height: auto;
 }
@@ -378,34 +386,59 @@ section {
 .project-titles h5 {
   font-size: 150%;
 }
-.mockup-column-two {
-  padding: 250px 0px 250px 0px;
-  margin: 0;
-  background-image: linear-gradient(45deg,
-  rgba(255, 99, 71, 0.3), rgba(255, 192, 74, 0.3)), url(./images/coffee-landing-page.jpg);
-  background-position: center top;
-  border-radius: 3px;
-}
 .technologies-used h4 {
   font-size: 14px;
   text-transform: uppercase;
   color: #ffc04a;
 }
-.fa-html5, .fa-js-square, .fa-css3-alt {
+.fa-html5,
+.fa-js-square,
+.fa-css3-alt, .fa-bootstrap {
   color: #cccccc;
   font-size: 24px;
 }
 
-/*#coffee-landing-page-project-photo {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  text-align: center;
-}*/
+/*PROJECT IMAGE COLUMN*/
+
+#project-img-1 {
+  padding: 250px 0px 250px 0px;
+  margin: 0;
+  background-image: linear-gradient(45deg,
+  rgba(255, 99, 71, 0.4), rgba(255, 192, 74, 0.4)), url(./images/coffee-landing-page.jpg);
+  background-position: center top;
+  border-radius: 3px;
+  /**/
+}
+#project-img-2 {
+    padding: 250px 0px 250px 0px;
+    margin: 0;
+    background-image: url(./images/first-weather-project-cropped.png), linear-gradient(45deg,
+      rgba(255, 99, 71, 0.9), rgba(255, 192, 74, 0.9));
+    background-position: center;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+}
+.view-project-link a {
+  text-transform: uppercase;
+  color: #ff6347;
+  font-weight: 400;
+  text-decoration: none;
+}
+.view-project-link i {
+  color: #ffc04a;
+  opacity: 0;
+}
+.view-project-link:hover i {
+  opacity: 1;
+  transition: all 300ms ease 0ms;
+}
+.view-project-link a:hover {
+  color: #ffc04a;
+  transition: all 300ms ease 0ms;
+}
+
 
 /*CONTACT SECTION STYLING*/
-/*rgba(255, 99, 71, 0.45) orange*/
-/*rgba(255, 192, 74, 0.45) yellow*/
 #contact-section {
   background-image:linear-gradient(45deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(./images/phx-az-map-2.png);
   background-size: cover;
@@ -421,17 +454,19 @@ section {
   font-size: 100%;
   font-weight: 400;
   color: #ffc04a;
+  text-align: center;
 }
 #contact-section h3 {
   font-size: 200%;
   margin-bottom: 20px;
+  text-align: center;
 }
 form {
-  background-color: #090909f6;
+  background-color: rgba(0,0,0,0.9);
   color: #ffffff;
   max-width: 50%;
   padding: 40px;
-  border-radius: 0px;
+  border-radius: 3px;
   line-height: 1.4;
   margin: 0 auto;
 }
@@ -452,7 +487,7 @@ label {
 #email {
   width: 100%;
   height: 40px;
-  background-color: #333333;
+  background-color: #1e1e1e;
   color: #ffffff;
   border-radius: 3px;
   border: none;
@@ -460,16 +495,28 @@ label {
 textarea {
   width: 100%;
   margin-bottom: 15px;
-  background-color: #333333;
+  background-color: #1e1e1e;
   color: #ffffff;
   border-radius: 3px;
   border: none;
 }
 #submit {
-  background-color: #000000;
+    background-color: #000000;
+    display: block !important;
+    width: fit-content;
+    margin: 30px auto 0px auto;
 }
-#submit:hover {
-  background-color: rgba(255, 99, 71, 0.1);
+input[type=text]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffc04a;
+}
+input[type=email]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffc04a;
+}
+#message:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #ffc04a;
 }
 
 /*CONTACT SECTION-TABLET STYLING*/
