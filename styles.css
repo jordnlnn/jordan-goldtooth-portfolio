@@ -141,6 +141,7 @@ section {
   border-radius: 3px;
   margin-top: 15px;
   margin-bottom: 15px;
+    transition: all 300ms ease 0ms;
 }
 
 .button:hover {
@@ -265,11 +266,11 @@ section {
   border-radius: 3px;
   height: 100%;
   background: #1e1e1e;
+  transition: all 300ms ease 0ms;
 }
 .services-blurbs:hover {
   background: linear-gradient(45deg,
     rgba(255, 99, 71, 0.7), rgba(255, 192, 74, 0.7));
-  transition: all 300ms ease 0ms;
 }
 .blurbs-row {
   align-items: stretch!important;
@@ -329,9 +330,11 @@ section {
   font-size: 100%;
   font-weight: 400;
   color: #ffc04a;
+  text-align: center;
 }
 #portfolio-section h3 {
   font-size: 200%;
+  text-align: center;
 }
 #arrows-column {
   display: flex;
@@ -393,30 +396,49 @@ section {
 }
 .fa-html5,
 .fa-js-square,
-.fa-css3-alt, .fa-bootstrap {
+.fa-css3-alt, .fa-bootstrap, .fa-react {
   color: #cccccc;
   font-size: 24px;
 }
 
 /*PROJECT IMAGE COLUMN*/
-
+/*linear-gradient(45deg,
+  rgba(255, 99, 71, 0.4), rgba(255, 192, 74, 0.4)),*/
 #project-img-1 {
   padding: 250px 0px 250px 0px;
   margin: 0;
-  background-image: linear-gradient(45deg,
-  rgba(255, 99, 71, 0.4), rgba(255, 192, 74, 0.4)), url(./images/coffee-landing-page.jpg);
-  background-position: center top;
+  background-image:  url(./images/coffee-landing-page.jpg);
+  background-position: center;
   border-radius: 3px;
-  /**/
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #project-img-2 {
     padding: 250px 0px 250px 0px;
     margin: 0;
-    background-image: url(./images/first-weather-project-cropped.png), linear-gradient(45deg,
-      rgba(255, 99, 71, 0.9), rgba(255, 192, 74, 0.9));
+    background-image: url(./images/first-weather-project-cropped.png);
     background-position: center;
     border-radius: 3px;
     background-repeat: no-repeat;
+    background-size: contain;
+}
+#project-img-3 {
+      padding: 250px 0px 250px 0px;
+      margin: 0;
+      background-image: url(./images/react-weather-project-cropped.png);
+      background-position: center;
+      border-radius: 3px;
+      background-repeat: no-repeat;
+      background-size: contain;
+}
+#project-img-4 {
+        padding: 250px 0px 250px 0px;
+        margin: 0;
+        background-image: url(./images/react-dictionary.jpg);
+        background-position: center;
+        border-radius: 3px;
+        background-size: contain;
+        background-repeat: no-repeat;
 }
 .view-project-link a {
   text-transform: uppercase;
