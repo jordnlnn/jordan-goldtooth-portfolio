@@ -118,7 +118,7 @@ section {
   margin: 0;
   padding: 0;
 }
-.row {
+.about-row, .services-row, .blurbs-row, .portfolio-row, .portfolio-mockup-row, .contact-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -126,10 +126,18 @@ section {
   padding: 30px;
 }
 @media (max-width: 811px) {
-  .row {
+  .about-row,
+  .services-row,
+  .portfolio-mockup-row,
+  .contact-row {
     height: auto;
     flex-direction: column;
   }
+  .portfolio-row, .blurbs-row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
 }
 
 /*STYLING FOR ALL BUTTONS*/
@@ -185,14 +193,14 @@ section {
   z-index: 3;
   background-repeat: no-repeat;
 }
-.about-orange-square {
+/*.about-orange-square {
   position: absolute;
   margin-top: 170px;
   margin-left: 190px;
   width: 250px;
   height: 250px;
   background: rgba(255, 99, 71, 0.3);
-}
+}*/
 .about-images-col {
   display: flex;
   justify-content: center;
@@ -208,10 +216,11 @@ section {
   #about-section h3 {
     font-size: 200%;
     text-align: center;
+    margin-top: 0;
   }
   #about-section p {
     font-size: 15px;
-    margin-bottom: 10px;
+    margin-bottom: 50px;
     text-align: center;
   }
   .about-section-button {
@@ -291,16 +300,10 @@ section {
   #services-section h3 {
     font-size: 200%;
     text-align: center;
+    margin-top: 0;
   }
   .services-description {
     font-size: 15px!important;
-    text-align: center;
-  }
-  #services-button {
-    display: none;
-  }
-  .services-column-2 {
-    display: inline-flex;
   }
   .services-column-2 h4 {
     font-size: 16px;
@@ -313,7 +316,18 @@ section {
   }
   .services-blurbs {
     padding: 10px;
-    width: 30%;
+    width: 100%;
+  }
+  .blurbs-col {
+    width: 33%;
+  }
+  #services-button {
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  .fa-code, .fa-pen-fancy, .fa-gears {
+    display: block;
+    margin-bottom: 8px;
   }
 }
 
@@ -353,9 +367,6 @@ section {
 }
 
 /*SLIDER ROW*/
-.carousel-track {
-  /*background-color: aqua;*/
-}
 .portfolio-mockup-row {
   height: auto;
 }
@@ -459,6 +470,114 @@ section {
   transition: all 300ms ease 0ms;
 }
 
+/*TABLET STYLING - PORTFOLIO*/
+@media (max-width: 811px) {
+  /*PORTFOLIO SECTION*/
+  #portfolio-section h2 {
+    text-transform: uppercase;
+    font-size: 90%;
+  }
+  #portfolio-section h3 {
+    font-size: 175%;
+  }
+  .portfolio-arrows {
+    font-size: 175%;
+  }
+
+  /*SLIDER ROW*/
+  .portfolio-mockup-row {
+    height: auto;
+  }
+
+  .portfolio-mockup-column {
+    text-align: left;
+  }
+
+  .mockup-column-one {
+    background-color: #1e1e1e;
+    padding: 50px;
+    }
+
+  .mockup-column-one p {
+    margin: 25px 0 25px 0;
+    padding: 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0);
+  }
+
+.project-titles h4 {
+  font-size: 14px;
+  color: #ffc04a;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.project-titles h5 {
+  font-size: 150%;
+}
+
+.technologies-used h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffc04a;
+}
+  .fa-html5,
+  .fa-js-square,
+  .fa-css3-alt,
+  .fa-bootstrap,
+  .fa-react {
+    color: #cccccc;
+    font-size: 22px;
+  }
+  .view-project-link {
+    display: block;
+    margin-top: 25px;
+  }
+  .mockup-column-two {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+  }
+  
+  /*PROJECT IMAGE COLUMN*/
+  #project-img-1 {
+    padding: 0;
+    margin: 0;
+  }
+  
+  #project-img-2 {
+    padding: 250px 0px 250px 0px;
+    margin: 0;
+    background-image: url(./images/first-weather-project-cropped.png);
+    background-position: center;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  #project-img-3 {
+    padding: 250px 0px 250px 0px;
+    margin: 0;
+    background-image: url(./images/react-weather-project-cropped.png);
+    background-position: center;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  #project-img-4 {
+    padding: 250px 0px 250px 0px;
+    margin: 0;
+    background-image: url(./images/react-dictionary.jpg);
+    background-position: center;
+    border-radius: 3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+}
+
 
 /*CONTACT SECTION STYLING*/
 #contact-section {
@@ -546,8 +665,13 @@ input[type=email]:focus {
   #contact-section h2 {
     font-size: 90%;
   }
+  .contact-col {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
   form {
-    max-width: 80%;
+    max-width: 100%;
     padding: 30px;
     margin: 0 auto;
   }
