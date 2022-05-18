@@ -263,6 +263,7 @@ section {
 }
 #services-section h4 {
   font-size: 20px;
+  padding-bottom: 0px;
 }
 .services-description {
   font-size: 16px;
@@ -283,6 +284,21 @@ section {
 }
 .blurbs-row {
   align-items: stretch!important;
+  padding-top: 0;
+}
+.fa-code, .fa-pen-fancy, .fa-gears {
+  display: block;
+  background-color: rgba(255, 99, 71, 0.7);
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  color: #1e1e1e;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .blurb-descriptions {
   font-weight: 400;
@@ -603,7 +619,7 @@ section {
   text-align: center;
 }
 form {
-  background-color: rgba(0,0,0,0.9);
+  background-color: rgba(0,0,0,1);
   color: #ffffff;
   max-width: 50%;
   padding: 40px;
