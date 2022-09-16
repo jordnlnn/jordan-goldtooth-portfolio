@@ -214,8 +214,8 @@ section {
   width: 400px;
   height: 500px;
   background-image: linear-gradient(45deg,
-      rgba(255, 99, 71, 0.3), rgba(255, 192, 74, 0.3)),
-    url(./images/JG-logo-transparent.png);
+      rgba(255, 99, 71, 0.2), rgba(255, 192, 74, 0.2)),
+    url(./images/jlgoldtooth.jpg);
   background-size: cover;
   background-position: top;
   border: 7px solid #000000;
@@ -223,6 +223,7 @@ section {
   z-index: 3;
   background-repeat: no-repeat;
 }
+
 
 /*.about-orange-square {
   position: absolute;
@@ -267,14 +268,15 @@ section {
 
   .about-img-div {
     width: 300px;
-    height: 300px;
+    height: 400px;
     z-index: 3;
-    background-position: center;
+    background-position: top center;
     background-repeat: no-repeat;
   }
 
   .about-images-col {
     order: 1;
+    margin-bottom: 50px;
   }
 
   .about-orange-square {
@@ -337,16 +339,15 @@ section {
 .fa-code,
 .fa-pen-fancy,
 .fa-gears {
-  display: block;
   background-color: rgba(255, 99, 71, 0.7);
   border-radius: 50%;
   width: 4rem;
   height: 4rem;
   margin-bottom: 2rem;
   border-radius: 50%;
-  color: #1e1e1e;
+  color: #000000;
   font-size: 35px;
-  display: flex;
+  display: flex!important;
   justify-content: center;
   align-items: center;
 }
@@ -377,6 +378,10 @@ section {
     font-size: 15px !important;
   }
 
+  .blurbs-row {
+    flex-direction: column;
+  }
+
   .services-column-2 h4 {
     font-size: 16px;
     text-align: left;
@@ -390,11 +395,19 @@ section {
 
   .services-blurbs {
     padding: 10px;
-    width: 100%;
+    width: 100%!important;
+  }
+
+  #development-blurb {
+    margin-bottom: 20px;
+  }
+
+  #design-blurb {
+    margin-bottom: 20px;
   }
 
   .blurbs-col {
-    width: 33%;
+    width: 100%;
   }
 
   #services-button {
@@ -405,8 +418,8 @@ section {
   .fa-code,
   .fa-pen-fancy,
   .fa-gears {
-    display: block;
     margin-bottom: 8px;
+    font-size: 25px;
   }
 }
 
