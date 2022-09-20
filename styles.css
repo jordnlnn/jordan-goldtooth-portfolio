@@ -515,7 +515,7 @@ section {
 .fa-js-square,
 .fa-css3-alt,
 .fa-bootstrap,
-.fa-react {
+.fa-react, .fa-wordpress {
   color: #cccccc;
   font-size: 24px;
 }
@@ -557,6 +557,16 @@ section {
   padding: 250px 0px 250px 0px;
   margin: 0;
   background-image: url(./images/react-dictionary.jpg);
+  background-position: center;
+  border-radius: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#project-img-5 {
+  padding: 250px 0px 250px 0px;
+  margin: 0;
+  background-image: url(./images/casa-mia-group-featured-image.jpg);
   background-position: center;
   border-radius: 3px;
   background-size: contain;
