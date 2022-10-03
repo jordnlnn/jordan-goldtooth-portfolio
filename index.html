@@ -298,8 +298,8 @@
         <div class="row contact-row">
           <div class="col contact-col">
   
-           <form id="contact-form" netlify>
-               <h2>How To Get In Touch💻</h2>
+           <form name="contact" id="contact-form" data-netlify="true">              
+            <h2>How To Get In Touch💻</h2>
                <h3>Contact Me</h3>
              <div class="form-group">
                <label for="name" id="name-label">Name:</label>
@@ -313,7 +313,7 @@
 
              <div class="form-group">
                <label for="message">Message:</label>
-               <textarea placeholder="Enter your message here" rows="5" id="message"></textarea>
+               <textarea placeholder="Enter your message here" rows="5" id="message" required></textarea>
              </div>
 
             <input type="submit" value="Submit" id="submit" class="button"></input>
