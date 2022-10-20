@@ -854,3 +854,7 @@ input[type=email]:focus {
     border: none;
   }
 }
+
+.g-recaptcha {
+  transform: scale(0.77);
+}
