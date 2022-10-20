@@ -854,3 +854,7 @@ input[type=email]:focus {
     border: none;
   }
 }
+
+.hidden {
+  display: none;
+}

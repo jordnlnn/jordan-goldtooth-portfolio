@@ -298,9 +298,16 @@
         <div class="row contact-row">
           <div class="col contact-col">
   
-           <form name="contact" id="contact-form" method="POST" data-netlify="true" data-netlify-recaptcha="true">              
+           <form name="contact" id="contact-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">              
             <h2>How To Get In Touch💻</h2>
                <h3>Contact Me</h3>
+
+               <p class="hidden">
+    <label>
+      Don’t fill this out if you’re human: <input name="bot-field" />
+    </label>
+  </p>
+
              <div class="form-group">
                <label for="name" id="name-label">Name:</label>
                <input id="name" type="text" placeholder="Enter your name" name="name" required></input>
@@ -315,8 +322,6 @@
                <label for="message">Message:</label>
                <textarea placeholder="Enter your message here" rows="5" id="message" name="message" required></textarea>
              </div>
-
-             <div data-netlify-recaptcha="true"></div>
 
             <input type="submit" value="Submit" id="submit" class="button"></input>
           </form>
