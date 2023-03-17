@@ -573,6 +573,16 @@ section {
   background-repeat: no-repeat;
 }
 
+#project-img-6 {
+  padding: 250px 0px 250px 0px;
+  margin: 0;
+  background-image: url(./images/Natours-Landing-Page-Featured-Image.png);
+  background-position: center;
+  border-radius: 3px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .view-project-link a {
   text-transform: uppercase;
   color: #ff6347;
